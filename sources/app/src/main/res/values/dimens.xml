@@ -1,0 +1,14 @@
+<resources>
+    <!-- Properties -->
+    <dimen name="property_button_size">50dp</dimen>
+    <dimen name="property_icon_padding">10dp</dimen>
+    <dimen name="property_text_width">80dp</dimen>
+    <!-- VolumeIcon -->
+    <dimen name="volume_icon_size">30dp</dimen>
+    <dimen name="volume_icon_padding">6dp</dimen>
+    <dimen name="margin_between_volume_icons">24dp</dimen>
+    <dimen name="size_margin_volume_icons">32dp</dimen>
+    <!-- Other -->
+    <dimen name="standard_margins">16dp</dimen>
+    <dimen name="volume_icon_border_width">2dp</dimen>
+</resources>

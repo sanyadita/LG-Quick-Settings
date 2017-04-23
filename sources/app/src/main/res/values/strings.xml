@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name" translatable="false">LG Quick Settings</string>
+    <!-- Messages -->
+    <string name="message_app_still_not_allowed">Some permissions are not allowed, so you can\'t use this app</string>
+    <string name="message_cant_be_changed">Can\'t be changed</string>
+    <string name="message_media">Media</string>
+    <string name="message_no_permissions">Application can\'t be started. Open case and allow required permissions</string>
+    <string name="message_notification">Notifications</string>
+    <string name="message_quick_circle_disabled">QuickCircle is not enabled on your device. Please turn it on and relaunch app</string>
+    <string name="message_ring">Ringtone</string>
+    <string name="message_using_allowed">Close case and use application. Make sure that application is enabled in QuickCircle</string>
+    <!-- Properties titles -->
+    <string name="property_title_auto">Auto</string>
+    <string name="property_title_back">Back</string>
+    <string name="property_title_battery">Battery</string>
+    <string name="property_title_bluetooth" translatable="false">Bluetooth</string>
+    <string name="property_title_brightness">Brightness</string>
+    <string name="property_title_exit">Exit</string>
+    <string name="property_title_gps" translatable="false">GPS</string>
+    <string name="property_title_mobile_data">Mobile data</string>
+    <string name="property_title_more">More</string>
+    <string name="property_title_silent">Silent</string>
+    <string name="property_title_sim_card">Sim Card</string>
+    <string name="property_title_sound">Sound</string>
+    <string name="property_title_sound_mode">Sound mode</string>
+    <string name="property_title_vibrate">Vibrate</string>
+    <string name="property_title_volume">Volume</string>
+    <string name="property_title_wifi" translatable="false">Wi-Fi</string>
+</resources>

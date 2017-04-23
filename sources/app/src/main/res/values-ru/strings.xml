@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Messages -->
+    <string name="message_app_still_not_allowed">Некоторые из разрешений не были подтверждены, поэтому Вы не можете пользоваться приложением</string>
+    <string name="message_cant_be_changed">Нельзя изменить</string>
+    <string name="message_media">Медиа</string>
+    <string name="message_no_permissions">Невозможно запустить приложение. Откройте чехол и подтвердите разрешения</string>
+    <string name="message_notification">Уведомления</string>
+    <string name="message_quick_circle_disabled">Функция QuickCircle отключена в вашем устройсве. Пожалуйста, включите её и перезапустите приложение</string>
+    <string name="message_ring">Звонок</string>
+    <string name="message_using_allowed">Закройте чехол, чтобы использовать приложение. Убедитесь, что приложение включено в список для QuickCircle</string>
+    <!-- Properties titles -->
+    <string name="property_title_auto">Авто</string>
+    <string name="property_title_back">Назад</string>
+    <string name="property_title_battery">Батарея</string>
+    <string name="property_title_brightness">Яркость</string>
+    <string name="property_title_exit">Выход</string>
+    <string name="property_title_mobile_data">Данные</string>
+    <string name="property_title_more">Далее</string>
+    <string name="property_title_silent">Без звука</string>
+    <string name="property_title_sim_card">Sim-карта</string>
+    <string name="property_title_sound">Звук</string>
+    <string name="property_title_sound_mode">Профиль звука</string>
+    <string name="property_title_vibrate">Вибрация</string>
+    <string name="property_title_volume">Громкость</string>
+</resources>

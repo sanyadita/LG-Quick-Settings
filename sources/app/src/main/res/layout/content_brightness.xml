@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/contentBackground"
+    android:padding="@dimen/standard_margins"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tvBrightness"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/white" />
+
+    <SeekBar
+        android:id="@+id/sbBrightness"
+        style="@style/AppTheme.SeekBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/standard_margins" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/standard_margins"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <com.sandradita.lg.quick_settings.ui.views.AppButton
+            android:id="@+id/appBtnBack"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:iconSrc="@drawable/ic_back"
+            app:text="@string/property_title_back" />
+
+        <com.sandradita.lg.quick_settings.ui.views.AppButton
+            android:id="@+id/appBtnAutoBrightness"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:iconSrc="@drawable/ic_auto_brightness"
+            app:text="@string/property_title_auto" />
+
+    </LinearLayout>
+
+</LinearLayout>

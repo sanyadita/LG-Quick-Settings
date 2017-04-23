@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorWhite">#ffffff</color>
+    <color name="contentBackground">#000000</color>
+    <!-- SeekBar_Colors -->
+    <color name="seekBarProgress">#7cb2e9</color>
+    <color name="seekBarPreProgress">#bdc7d1</color>
+    <!-- VolumeIcon_Colors -->
+    <color name="volumeIconBorder">#ffffff</color>
+    <color name="volumeIconRipple">#86bef5</color>
+    <!-- AppButton_Colors -->
+    <color name="btnIconColor">#FFffffff</color>
+    <color name="btnOnBackground">#0a78e7</color>
+    <color name="btnOnRipple">#123</color>
+    <color name="btnOffBackground">#123</color>
+    <color name="btnOffRipple">#3F51B5</color>
+</resources>
