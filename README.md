@@ -2,6 +2,8 @@
 
 This is an Android app for LG smartphones  which have QuickCircle feature. Android minimum version - 6.0 (sdk 23). It helps to turn on/off Wi-Fi, Bluetooth, to change volume level, sound mode and brightness level, to check if mobile data and GPS are turned on and to check battery percentage. Also for DualSim smartphones it shows current default sim card. Doesn’t need root.
 
+To download apk file click <a href="application/lg-quick-settings-1.0.1.apk">here</a>.
+
 Main menu screenshot:<br>
 <img src="screenshots/main-menu.png" width="300" alt="Main menu">
 
