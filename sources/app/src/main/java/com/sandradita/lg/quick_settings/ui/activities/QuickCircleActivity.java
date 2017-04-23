@@ -23,6 +23,14 @@ public class QuickCircleActivity extends BaseCircleActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        if (PermissionHelper.checkAllPermissions(this, AppConstants.APP_PERMISSIONS)) {
+            pushController(MenuController.class);
+        }
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
         if (!PermissionHelper.checkAllPermissions(this, AppConstants.APP_PERMISSIONS)) {
             showNoPermissionsMessage();
 
@@ -30,8 +38,7 @@ public class QuickCircleActivity extends BaseCircleActivity {
             if (circleTemplate != null) {
                 circleTemplate.setFullscreenIntent(new Intent(this, PermissionsActivity.class));
             }
-        } else {
-            pushController(MenuController.class);
+            startActivity(new Intent(this, PermissionsActivity.class));
         }
     }
 
