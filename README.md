@@ -14,3 +14,6 @@ Download apk file, copy it to your device and open to install. Then go to ‘Set
 Was tested on LG G3 Dual and LG G3s.
 
 **P.S.** *Next version will have customization menu. So user will be able to choose items color and order.*
+
+
+All your remarks and suggestionы you can send to sannydita@gmail.com
