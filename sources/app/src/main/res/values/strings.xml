@@ -1,5 +1,7 @@
 <resources>
     <string name="app_name" translatable="false">LG Quick Settings</string>
+    <string name="appNotifications">Device notifications</string>
+    <string name="serviceNotifications" translatable="false">LGQuickSettings.NotificationService</string>
     <!-- Messages -->
     <string name="message_app_still_not_allowed">Some permissions are not allowed, so you can\'t use this app</string>
     <string name="message_cant_be_changed">Can\'t be changed</string>

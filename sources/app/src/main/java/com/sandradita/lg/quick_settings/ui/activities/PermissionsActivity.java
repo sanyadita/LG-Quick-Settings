@@ -15,6 +15,7 @@ import com.lge.qcircle.utils.QCircleFeature;
 import com.sandradita.lg.quick_settings.R;
 import com.sandradita.lg.quick_settings.constants.AppConstants;
 import com.sandradita.lg.quick_settings.helpers.PermissionHelper;
+import com.sandradita.lg.quick_settings.services.NotificationService;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -54,9 +55,11 @@ public class PermissionsActivity extends AppCompatActivity {
     }
 
     private void checkPermissions() {
-        if (PermissionHelper.allPermissionsAllowed(this, AppConstants.APP_PERMISSIONS)) {
+        if (!NotificationService.isNotificationAccessEnabled) {
+            PermissionHelper.openNotificationSettings(this);
+        } else if (PermissionHelper.checkAllPermissions(this, AppConstants.APP_PERMISSIONS)) {
             tvResult.setText(R.string.message_using_allowed);
-        } else if (PermissionHelper.systemChangedNotAllowed(this)) {
+        } else if (!PermissionHelper.systemChangesAllowed(this)) {
             openWriteSettingsPermission();
         } else {
             ActivityCompat.requestPermissions(this, AppConstants.APP_PERMISSIONS, REQUEST_PERMISSIONS);

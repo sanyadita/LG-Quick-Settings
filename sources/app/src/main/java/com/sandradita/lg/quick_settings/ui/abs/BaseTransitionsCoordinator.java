@@ -1,6 +1,6 @@
 package com.sandradita.lg.quick_settings.ui.abs;
 
-import com.sandradita.lg.quick_settings.ui.controllers.TransitionsCoordinator;
+import com.sandradita.lg.quick_settings.ui.controllers.settings.TransitionsCoordinator;
 
 import java.util.ArrayList;
 import java.util.List;

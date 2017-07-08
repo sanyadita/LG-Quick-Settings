@@ -13,6 +13,8 @@ import com.sandradita.lg.quick_settings.properties.SimProperty;
 import com.sandradita.lg.quick_settings.properties.SimpleProperty;
 import com.sandradita.lg.quick_settings.properties.SoundModeProperty;
 import com.sandradita.lg.quick_settings.properties.WiFiProperty;
+import com.sandradita.lg.quick_settings.ui.controllers.settings.BrightnessController;
+import com.sandradita.lg.quick_settings.ui.controllers.settings.VolumeController;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -37,8 +39,8 @@ public final class PropertiesHelper {
     /**
      * Creates property by selected type. It creates object by type class except {@link Type#BRIGHTNESS} and
      * {@link Type#VOLUME}, for which this method creates instance of class {@link SimpleProperty}.
-     * SimpleProperty of Type.BRIGHTNESS should open view of {@link com.sandradita.lg.quick_settings.ui.controllers.BrightnessController} and of
-     * Type.VOLUME open view of {@link com.sandradita.lg.quick_settings.ui.controllers.VolumeController}.
+     * SimpleProperty of Type.BRIGHTNESS should open view of {@link BrightnessController} and of
+     * Type.VOLUME open view of {@link VolumeController}.
      *
      * @param context application context
      * @param type    property type

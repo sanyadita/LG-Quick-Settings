@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="appNotifications">Уведомления устройства</string>
     <!-- Messages -->
     <string name="message_app_still_not_allowed">Некоторые из разрешений не были подтверждены, поэтому Вы не можете пользоваться приложением</string>
     <string name="message_cant_be_changed">Нельзя изменить</string>

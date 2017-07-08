@@ -7,15 +7,21 @@ import android.content.IntentFilter;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.LayoutRes;
+import android.view.Gravity;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
 
 import com.lge.qcircle.template.QCircleTemplate;
 import com.lge.qcircle.template.TemplateTag;
 import com.lge.qcircle.template.TemplateType;
+import com.sandradita.lg.quick_settings.R;
+import com.sandradita.lg.quick_settings.constants.AppConstants;
+import com.sandradita.lg.quick_settings.helpers.PermissionHelper;
 import com.sandradita.lg.quick_settings.services.SafeBroadcastReceiver;
-import com.sandradita.lg.quick_settings.ui.controllers.TransitionsCoordinator;
+import com.sandradita.lg.quick_settings.ui.activities.PermissionsActivity;
+import com.sandradita.lg.quick_settings.ui.controllers.settings.TransitionsCoordinator;
 
 /**
  * Base activity for activities that should be working in quick circle.
@@ -41,14 +47,20 @@ public abstract class BaseCircleActivity extends Activity {
         setContentView(circleTemplate.getView());
 
         circleTemplate.setBackgroundColor(Color.BLACK);
-        circleTemplate.registerIntentReceiver();
+//        circleTemplate.registerIntentReceiver();
 
         mainLayout = circleTemplate.getLayoutById(TemplateTag.CONTENT_MAIN);
         transitionsCoordinator = new TransitionsCoordinator(transitions);
 
         // To turn off screen after time out
         getWindow().clearFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
+
+        if (PermissionHelper.checkAllPermissions(this, AppConstants.APP_PERMISSIONS)) {
+            onActivityCreated();
+        }
     }
+
+    protected abstract void onActivityCreated();
 
     @Override
     protected void onPause() {
@@ -62,6 +74,15 @@ public abstract class BaseCircleActivity extends Activity {
         transitionsCoordinator.onResume();
         IntentFilter intentFilter = new IntentFilter(Intent.ACTION_SCREEN_OFF);
         lockScreenReceiver.register(this, intentFilter);
+        if (!PermissionHelper.checkAllPermissions(this, AppConstants.APP_PERMISSIONS)) {
+            showNoPermissionsMessage();
+
+            QCircleTemplate circleTemplate = getCircleTemplate();
+            if (circleTemplate != null) {
+//                circleTemplate.setFullscreenIntent(new Intent(this, PermissionsActivity.class));
+            }
+            startActivity(new Intent(this, PermissionsActivity.class));
+        }
     }
 
     @Override
@@ -76,6 +97,18 @@ public abstract class BaseCircleActivity extends Activity {
     public View findViewById(int id) {
         if (content == null) return null;
         return content.findViewById(id);
+    }
+
+    /**
+     * Shows message that not all required permissions are enabled.
+     */
+    private void showNoPermissionsMessage() {
+        TextView textView = new TextView(this);
+        textView.setText(R.string.message_no_permissions);
+        textView.setPadding(100, 100, 100, 100);
+        textView.setTextColor(Color.WHITE);
+        textView.setGravity(Gravity.CENTER);
+        setContent(textView);
     }
 
     /**

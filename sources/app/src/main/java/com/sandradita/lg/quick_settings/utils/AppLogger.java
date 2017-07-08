@@ -19,7 +19,7 @@ public final class AppLogger {
      * be format into a string separated by whitespace. If objects are null or its amount is 0,
      * shows "(null)" as message. Tag will be shown as "{@link AppLogger#APP_TAG APP_TAG} tag message".
      */
-    public static <T> void debug(@Nullable String tag, @Nullable T... objects) {
+    public static void debug(@Nullable String tag, @Nullable Object... objects) {
         String fullTag = getFullTag(tag);
         String fullMessage = getFullMessage(objects);
 
@@ -31,7 +31,7 @@ public final class AppLogger {
      * be format into a string separated by whitespace. If objects are null or its amount is 0,
      * shows "(null)" as message. Tag will be {@link AppLogger#APP_TAG APP_TAG}.
      */
-    public static <T> void debug(@Nullable T... objects) {
+    public static void debug(@Nullable Object... objects) {
         debug(null, objects);
     }
 
@@ -40,7 +40,7 @@ public final class AppLogger {
      * be format into a string separated by whitespace. If objects are null or its amount is 0,
      * shows "(null)" as message. Tag will be shown as "{@link AppLogger#APP_TAG APP_TAG} tag message".
      */
-    public static <T> void info(@Nullable String tag, @Nullable T... objects) {
+    public static void info(@Nullable String tag, @Nullable Object... objects) {
         String fullTag = getFullTag(tag);
         String fullMessage = getFullMessage(objects);
 
@@ -52,7 +52,7 @@ public final class AppLogger {
      * be format into a string separated by whitespace. If objects are null or its amount is 0,
      * shows "(null)" as message. Tag will be {@link AppLogger#APP_TAG APP_TAG}.
      */
-    public static <T> void info(@Nullable T... objects) {
+    public static void info(@Nullable Object... objects) {
         info(null, objects);
     }
 

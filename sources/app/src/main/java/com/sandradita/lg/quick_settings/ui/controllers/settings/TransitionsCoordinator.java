@@ -1,4 +1,4 @@
-package com.sandradita.lg.quick_settings.ui.controllers;
+package com.sandradita.lg.quick_settings.ui.controllers.settings;
 
 import com.sandradita.lg.quick_settings.ui.abs.BaseTransitionsCoordinator;
 

@@ -1,6 +1,7 @@
 package com.sandradita.lg.quick_settings.helpers;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Build;
 import android.provider.Settings;
@@ -43,8 +44,8 @@ public final class PermissionHelper {
      * @param context application context
      * @return true if application can change system settings
      */
-    public static boolean systemChangedNotAllowed(Context context) {
-        return Build.VERSION.SDK_INT >= Build.VERSION_CODES.M && !Settings.System.canWrite(context);
+    public static boolean systemChangesAllowed(Context context) {
+        return Build.VERSION.SDK_INT >= Build.VERSION_CODES.M && Settings.System.canWrite(context);
     }
 
     /**
@@ -55,7 +56,13 @@ public final class PermissionHelper {
      * @return true if all permissions are allowed
      */
     public static boolean checkAllPermissions(Context context, @Nullable String... permissions) {
-        return !systemChangedNotAllowed(context) && allPermissionsAllowed(context, permissions);
+        return systemChangesAllowed(context) && allPermissionsAllowed(context, permissions);
+    }
+
+    public static void openNotificationSettings(Context context) {
+        Intent intent = new Intent(Settings.ACTION_NOTIFICATION_LISTENER_SETTINGS);
+        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        context.startActivity(intent);
     }
 
 }
